@@ -34,9 +34,9 @@ npm install
 List of available routes:
 
 **Auth routes**:\
-`POST /api/login` - login\
+`POST /api/login` - login
 
 **User routes**:\
 `POST /api/users` - create a user\
 `GET /api/users` - create a users\
-`GET /api/users/:userId` - get user\
+`GET /api/users/:userId` - get user
