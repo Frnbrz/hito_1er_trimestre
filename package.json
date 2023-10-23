@@ -9,7 +9,7 @@
 		"dev:cliente": "cd cliente && npm run dev"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Francisco Briz",
 	"license": "ISC",
 	"devDependencies": {
 		"@types/express": "^4.17.20",
