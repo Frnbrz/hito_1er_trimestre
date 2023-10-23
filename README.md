@@ -29,6 +29,8 @@ npm install
 
 ## API
 
+port: 3000
+
 ### API Endpoints
 
 List of available routes:
@@ -40,3 +42,11 @@ List of available routes:
 `POST /api/users` - create a user\
 `GET /api/users` - create a users\
 `GET /api/users/:userId` - get user
+
+## Front
+
+port: 3001
+
+## Dependencies
+
+- **Bootstrap**: [bootstrap](https://getbootstrap.com/)
