@@ -50,3 +50,9 @@ port: 3001
 ## Dependencies
 
 - **Bootstrap**: [bootstrap](https://getbootstrap.com/)
+
+## Auth
+
+![Refresh Token](./servidor/static/jwt-refresh-token-node-js-example-flow.png)
+
+![Node.js Express Architecture with Authentication & Authorization](./servidor/static/node-js-mongodb-jwt-authentication-architecture.png)
