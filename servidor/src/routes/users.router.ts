@@ -9,7 +9,6 @@ usersRouter.get('/', (_req, res) => {
 })
 
 usersRouter.get('/:id', (req, res) => {
-	console.log(req.body)
 	const id = req.params.id
 	const user = findUserById(+id)
 

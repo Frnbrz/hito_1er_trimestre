@@ -1,14 +1,18 @@
 import express from 'express'
-import { login } from '../services/user.services'
+import { login } from '../services/login.service'
+import { toNewLoginEntry } from '../utils'
 
 const loginRouter = express.Router()
-
 loginRouter.post('/', (req, res) => {
-	const user = login(req.body.email, req.body.password)
-	if (user) {
-		res.send({ jwt: 'token', status: 200 })
-	} else {
-		res.sendStatus(404)
+	try {
+		const newLoginEntry = toNewLoginEntry(req.body)
+		if (login(newLoginEntry)) {
+			res.send({ jwt: 'token', status: 200 })
+		} else {
+			res.sendStatus(404)
+		}
+	} catch (error: any) {
+		res.status(400).send(error.message)
 	}
 })
 

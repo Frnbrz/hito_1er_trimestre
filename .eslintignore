@@ -1,0 +1,12 @@
+src/*.json
+src/**.json
+src/
+src/jsonfile.json
+/src/
+/src/jsonfile.json
+src/*
+src/**
+./*.json
+./**.json
+cliente/public/**.js
+cliente/public/*.js
