@@ -26,14 +26,3 @@ export const addUser = (newUserEntry: newUserEntry): User => {
 
 	return newUser
 }
-
-export const login = (email: string, password: string): User | undefined => {
-	const user = users.find(
-		user => user.email === email && user.password === password,
-	)
-	if (user) {
-		return user
-	}
-
-	return undefined
-}
