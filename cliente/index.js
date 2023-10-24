@@ -8,10 +8,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get('/', (_req, res) => {
-	return res.redirect('index.html')
+  return res.redirect('index.html')
 })
 
 app.listen(port, () => {
-	console.log(`The application started
+  console.log(`The application started
 successfully on port ${port}`)
 })
