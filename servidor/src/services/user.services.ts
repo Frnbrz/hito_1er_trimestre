@@ -4,25 +4,27 @@ import { User, newUserEntry } from '../types'
 
 const users: User[] = usersData as User[]
 
-export const getUsers = (): User[] => users
-
-export const findUserById = (id: number): User | undefined => {
-	const user = users.find(user => user.id === id)
-	return user
+export function getUsers(): User[] {
+  return users
 }
 
-export const addUser = (newUserEntry: newUserEntry): User => {
-	const newUser = {
-		id: users.length + 1,
-		...newUserEntry,
-	}
+export function findUserById(id: number): User | undefined {
+  const user = users.find((user) => user.id === id)
+  return user
+}
 
-	fs.writeFileSync(
-		'./src/bd/users.json',
-		JSON.stringify([...users, newUser], null, 2),
-	)
+export function addUser(newUserEntry: newUserEntry): User {
+  const newUser = {
+    id: users.length + 1,
+    ...newUserEntry
+  }
 
-	users.push(newUser)
+  fs.writeFileSync(
+    './src/bd/users.json',
+    JSON.stringify([...users, newUser], null, 2)
+  )
 
-	return newUser
+  users.push(newUser)
+
+  return newUser
 }

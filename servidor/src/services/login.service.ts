@@ -4,18 +4,16 @@ import { newLoginEntry } from './../types.d'
 
 const users: User[] = usersData as User[]
 
-export const login = (
-	newLoginEntry: newLoginEntry,
-): newLoginEntry | undefined => {
-	const user = users.find(
-		user =>
-			user.email === newLoginEntry.email &&
-			user.password === newLoginEntry.password,
-	)
+export function login(newLoginEntry: newLoginEntry): newLoginEntry | undefined {
+  const user = users.find(
+    (user) =>
+      user.email === newLoginEntry.email &&
+      user.password === newLoginEntry.password
+  )
 
-	if (user) {
-		return user
-	}
+  if (user != null) {
+    return user
+  }
 
-	return undefined
+  return undefined
 }

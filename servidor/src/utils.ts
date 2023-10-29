@@ -1,52 +1,52 @@
 import { newLoginEntry, newUserEntry } from './types'
 
-export const toNewUserEntry = (object: any): newUserEntry => {
-	const newUserEntry: newUserEntry = {
-		name: parseName(object.name),
-		email: parseEmail(object.email),
-		password: parsePassword(object.password),
-	}
+export function toNewUserEntry(object: any): newUserEntry {
+  const newUserEntry: newUserEntry = {
+    name: parseName(object.name),
+    email: parseEmail(object.email),
+    password: parsePassword(object.password)
+  }
 
-	return newUserEntry
+  return newUserEntry
 }
 
-export const toNewLoginEntry = (object: any): newLoginEntry => {
-	const newLoginEntry: newLoginEntry = {
-		email: parseEmail(object.email),
-		password: parsePassword(object.password),
-	}
+export function toNewLoginEntry(object: any): newLoginEntry {
+  const newLoginEntry: newLoginEntry = {
+    email: parseEmail(object.email),
+    password: parsePassword(object.password)
+  }
 
-	return newLoginEntry
+  return newLoginEntry
 }
 
-const isString = (text: any): boolean => {
-	return typeof text === 'string' || text instanceof String
+function isString(text: any): boolean {
+  return typeof text === 'string' || text instanceof String
 }
 
-const isUndefined = (text: any): boolean => {
-	return text === undefined
+function isUndefined(text: any): boolean {
+  return text === undefined
 }
 
-const parseName = (nameFromRequest: any): string => {
-	if (!isString(nameFromRequest) || isUndefined(nameFromRequest)) {
-		throw new Error('Incorrect or missing name')
-	}
+function parseName(nameFromRequest: any): string {
+  if (!isString(nameFromRequest) || isUndefined(nameFromRequest)) {
+    throw new Error('Incorrect or missing name')
+  }
 
-	return nameFromRequest
+  return nameFromRequest
 }
 
-const parseEmail = (emailFromRequest: any): string => {
-	if (!isString(emailFromRequest) || isUndefined(emailFromRequest)) {
-		throw new Error('Incorrect or missing email')
-	}
+function parseEmail(emailFromRequest: any): string {
+  if (!isString(emailFromRequest) || isUndefined(emailFromRequest)) {
+    throw new Error('Incorrect or missing email')
+  }
 
-	return emailFromRequest
+  return emailFromRequest
 }
 
-const parsePassword = (passwordFromRequest: any): string => {
-	if (!isString(passwordFromRequest) || isUndefined(passwordFromRequest)) {
-		throw new Error('Incorrect or missing password')
-	}
+function parsePassword(passwordFromRequest: any): string {
+  if (!isString(passwordFromRequest) || isUndefined(passwordFromRequest)) {
+    throw new Error('Incorrect or missing password')
+  }
 
-	return passwordFromRequest
+  return passwordFromRequest
 }
