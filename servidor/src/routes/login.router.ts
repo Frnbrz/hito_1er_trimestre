@@ -1,8 +1,9 @@
 import express, { Request, Response } from 'express'
 import jwt from 'jsonwebtoken'
 import { login } from '../services/login.service'
-import { User, newLoginEntry } from '../types'
-import { statusMessage, toNewLoginEntry } from '../utils'
+import { statusMessage } from '../types/errors'
+import { User, newLoginEntry } from '../types/types'
+import { toNewLoginEntry } from '../utils/utils'
 
 const SECRET_KEY = 'your-secret-key-here'
 

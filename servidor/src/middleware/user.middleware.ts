@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
-import { statusMessage } from '../utils'
+import { statusMessage } from '../types/errors'
 
 export function middleware(
   req: Request,

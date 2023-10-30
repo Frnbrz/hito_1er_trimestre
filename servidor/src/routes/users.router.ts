@@ -1,6 +1,7 @@
 import express from 'express'
 import { addUser, findUserById, getUsers } from '../services/user.services'
-import { statusMessage, toNewUserEntry } from '../utils'
+import { statusMessage } from '../types/errors'
+import { toNewUserEntry } from '../utils/utils'
 
 export const usersRouter = express.Router()
 
