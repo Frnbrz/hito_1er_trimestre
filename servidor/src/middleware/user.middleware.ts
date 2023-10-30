@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
+import { statusMessage } from '../utils'
 
 export function middleware(
   req: Request,
@@ -10,6 +11,8 @@ export function middleware(
   if (token !== undefined) {
     next()
   } else {
-    res.status(401).json({ message: 'Unauthorized' })
+    res
+      .status(401)
+      .json({ status: statusMessage.BAD_REQUEST, message: 'No token' })
   }
 }
