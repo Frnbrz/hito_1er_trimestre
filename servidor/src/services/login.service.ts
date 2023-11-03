@@ -1,6 +1,5 @@
 import usersData from '../bd/users.json'
-import { User } from '../types'
-import { newLoginEntry } from './../types.d'
+import { User, newLoginEntry } from '../types/types'
 
 const users: User[] = usersData as User[]
 
