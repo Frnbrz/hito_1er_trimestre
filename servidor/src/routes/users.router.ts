@@ -1,12 +1,11 @@
 import express from 'express'
 import { addUser, findUserById, getUsers } from '../services/user.services'
-import { statusMessage } from '../types/errors'
 import { toNewUserEntry } from '../utils/utils'
 
 export const usersRouter = express.Router()
 
 usersRouter.get('/', (_req, res) => {
-  res.send({ status: statusMessage.OK, data: getUsers() })
+  res.send({ status: 'OK', data: getUsers() })
 })
 
 usersRouter.get('/:id', (req, res) => {
@@ -14,10 +13,8 @@ usersRouter.get('/:id', (req, res) => {
   const user = findUserById(+id)
 
   return user !== undefined
-    ? res.send({ status: statusMessage.OK, data: user })
-    : res
-        .status(404)
-        .send({ status: statusMessage.NOT_FOUND, message: 'User not found' })
+    ? res.send({ status: 'OK', data: user })
+    : res.status(404).send({ status: 'NOT FOUND', message: 'User not found' })
 })
 
 usersRouter.post('/', (req, res) => {
@@ -27,8 +24,6 @@ usersRouter.post('/', (req, res) => {
 
     res.json(addedUserEntry)
   } catch (error: any) {
-    res
-      .status(400)
-      .send({ status: statusMessage.BAD_REQUEST, message: error.message })
+    res.status(400).send({ status: 'BADREQUEST', message: error.message })
   }
 })
