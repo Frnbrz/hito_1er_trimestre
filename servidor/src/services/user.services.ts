@@ -1,6 +1,6 @@
 import fs from 'fs'
 import usersData from '../bd/users.json'
-import { User, newUserEntry } from '../types'
+import { User, newUserEntry } from '../types/types'
 
 const users: User[] = usersData as User[]
 
