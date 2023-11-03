@@ -15,7 +15,6 @@ export function toNewLoginEntry(object: any): newLoginEntry {
     email: parseEmail(object.email),
     password: parsePassword(object.password)
   }
-
   return newLoginEntry
 }
 
