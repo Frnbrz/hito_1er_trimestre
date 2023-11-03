@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express'
 import jwt from 'jsonwebtoken'
 import { login } from '../services/login.service'
-import { statusMessage } from '../types/errors'
 import { User, newLoginEntry } from '../types/types'
 import { toNewLoginEntry } from '../utils/utils'
 
@@ -24,17 +23,15 @@ loginRouter.post('/', (req: Request, res: Response) => {
         },
         SECRET_KEY
       )
-      res
-        .status(200)
-        .send({ status: statusMessage.OK, data: { user: { name }, token } })
+      res.status(200).send({ status: 'OK', data: { user: { name }, token } })
     } else {
       res
         .status(401)
-        .send({ status: statusMessage.UNAUTHORIZED, message: 'error at login' })
+        .send({ status: 'UNAUTHORIZED', message: 'error at login' })
     }
   } catch (error: any) {
     res.status(400).send({
-      status: statusMessage.BAD_REQUEST,
+      status: 'BAD REQUEST',
       message: error.message,
       error
     })
