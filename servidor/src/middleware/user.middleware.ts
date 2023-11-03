@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from 'express'
-import { statusMessage } from '../types/errors'
 
 export function middleware(
   req: Request,
@@ -11,8 +10,6 @@ export function middleware(
   if (token !== undefined) {
     next()
   } else {
-    res
-      .status(401)
-      .json({ status: statusMessage.BAD_REQUEST, message: 'No token' })
+    res.status(401).json({ status: 'BAD_REQUEST', message: 'No token' })
   }
 }
