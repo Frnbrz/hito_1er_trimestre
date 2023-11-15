@@ -1,4 +1,5 @@
-import { newLoginEntry, newUserEntry } from '../types/types'
+import bcrypt from 'bcrypt'
+import { newLoginEntry, newProductEntry, newUserEntry } from '../types/types'
 
 export function toNewUserEntry(object: any): newUserEntry {
   const newUserEntry: newUserEntry = {
@@ -8,6 +9,18 @@ export function toNewUserEntry(object: any): newUserEntry {
   }
 
   return newUserEntry
+}
+
+export function toNewProductEntry(object: any): newProductEntry {
+  const newProductEntry: newProductEntry = {
+    name: parseName(object.name),
+    category: parseCategory(object.category),
+    price: parsePrice(object.price),
+    stock: parseStock(object.stock),
+    img: parseImg(object.img)
+  }
+
+  return newProductEntry
 }
 
 export function toNewLoginEntry(object: any): newLoginEntry {
@@ -47,5 +60,56 @@ function parsePassword(passwordFromRequest: any): string {
     throw new Error('Incorrect or missing password')
   }
 
-  return passwordFromRequest
+  const passwordEncrypt: string = encryptPassword(passwordFromRequest)
+
+  return passwordEncrypt
+}
+
+function encryptPassword(password: string): string {
+  const saltRounds = 10
+  const passwordEncrypt = bcrypt.hashSync(password, saltRounds)
+
+  return passwordEncrypt
+}
+
+function parseCategory(categoryFromRequest: string): string {
+  if (!isString(categoryFromRequest) || isUndefined(categoryFromRequest)) {
+    throw new Error('Incorrect or missing category')
+  }
+
+  return categoryFromRequest
+}
+
+function parsePrice(priceFromRequest: number): number {
+  if (
+    isUndefined(priceFromRequest) ||
+    isNaN(priceFromRequest) ||
+    priceFromRequest < 0
+  ) {
+    throw new Error('Incorrect or missing price')
+  }
+  return priceFromRequest
+}
+
+function parseStock(stockFromRequest: number): number {
+  if (
+    isUndefined(stockFromRequest) ||
+    isNaN(stockFromRequest) ||
+    stockFromRequest < 0
+  ) {
+    throw new Error('Incorrect or missing price')
+  }
+  return stockFromRequest
+}
+
+function parseImg(imgFromRequest: string): string {
+  if (
+    !isString(imgFromRequest) ||
+    isUndefined(imgFromRequest) ||
+    imgFromRequest === ''
+  ) {
+    throw new Error('Incorrect or missing img')
+  }
+
+  return imgFromRequest
 }
