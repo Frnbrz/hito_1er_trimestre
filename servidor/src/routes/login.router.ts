@@ -4,7 +4,7 @@ import { login } from '../services/login.service'
 import { User, newLoginEntry } from '../types/types'
 import { toNewLoginEntry } from '../utils/utils'
 
-const SECRET_KEY = 'your-secret-key-here'
+const SECRET_KEY = process.env.JWT_SECRET || 'secret'
 
 export const loginRouter = express.Router()
 loginRouter.post('/', (req: Request, res: Response) => {
