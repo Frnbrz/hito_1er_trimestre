@@ -4,12 +4,13 @@ import {
   findProductById,
   getProducts
 } from '../services/store.service'
+import { StatusMessage, StatusType } from '../types/enums'
 import { toNewProductEntry } from '../utils/utils'
 
 export const productsRouter = express.Router()
 
 productsRouter.get('/', (_req, res) => {
-  res.send({ status: 'OK', data: getProducts() })
+  res.send({ status: StatusType.OK, data: getProducts() })
 })
 
 productsRouter.get('/:id', (req, res) => {
@@ -18,7 +19,9 @@ productsRouter.get('/:id', (req, res) => {
 
   return user !== undefined
     ? res.send({ status: 'OK', data: user })
-    : res.status(404).send({ status: 'NOT FOUND', message: 'User not found' })
+    : res
+        .status(404)
+        .send({ status: StatusType.NOT_FOUND, message: StatusMessage.USER })
 })
 
 productsRouter.post('/', (req, res) => {
@@ -28,6 +31,8 @@ productsRouter.post('/', (req, res) => {
 
     res.json(addedUserEntry)
   } catch (error: any) {
-    res.status(400).send({ status: 'BADREQUEST', message: error.message })
+    res
+      .status(400)
+      .send({ status: StatusType.BADREQUEST, message: error.message })
   }
 })

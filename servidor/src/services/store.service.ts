@@ -1,5 +1,6 @@
 import fs from 'fs'
 import storeData from '../bd/store.json'
+import { ThrowError } from '../types/enums'
 import { Product, newProductEntry } from './../types/types.d'
 
 const products: Product[] = storeData as Product[]
@@ -20,7 +21,7 @@ export function addProduct(newProductEntry: newProductEntry): Product {
   }
 
   if (products.find((product) => product.name === newProduct.name)) {
-    throw new Error('Product already exists')
+    throw new Error(ThrowError.PRODUCT)
   }
 
   fs.writeFileSync(

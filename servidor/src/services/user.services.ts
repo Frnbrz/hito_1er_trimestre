@@ -1,5 +1,6 @@
 import fs from 'fs'
 import usersData from '../bd/users.json'
+import { ThrowError } from '../types/enums'
 import { User, newUserEntry } from '../types/types'
 
 const users: User[] = usersData as User[]
@@ -20,7 +21,7 @@ export function addUser(newUserEntry: newUserEntry): User {
   }
 
   if (users.find((user) => user.email === newUser.email)) {
-    throw new Error('Email already exists')
+    throw new Error(ThrowError.EMAIL)
   }
 
   fs.writeFileSync(
