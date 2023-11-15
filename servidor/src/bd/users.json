@@ -3,120 +3,126 @@
     "id": 1,
     "name": "John Doe",
     "email": "john@doe.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 2,
     "name": "Sojung Lee",
     "email": "sojung@lee.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 3,
     "name": "John Smith",
     "email": "john@smith.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 4,
     "name": "Jane Smith",
     "email": "jane@smith.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 5,
     "name": "Bob Johnson",
     "email": "bob@johnson.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 6,
     "name": "Alice Johnson",
     "email": "alice@johnson.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 7,
     "name": "David Lee",
     "email": "david@lee.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 8,
     "name": "Emily Lee",
     "email": "emily@lee.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 9,
     "name": "Michael Brown",
     "email": "michael@brown.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 10,
     "name": "Sarah Brown",
     "email": "sarah@brown.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 11,
     "name": "William Davis",
     "email": "william@davis.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 12,
     "name": "Olivia Davis",
     "email": "olivia@davis.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 13,
     "name": "James Wilson",
     "email": "james@wilson.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 14,
     "name": "Sophia Wilson",
     "email": "sophia@wilson.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 15,
     "name": "Benjamin Taylor",
     "email": "benjamin@taylor.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 16,
     "name": "Isabella Taylor",
     "email": "isabella@taylor.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 17,
     "name": "Daniel Anderson",
     "email": "daniel@anderson.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 18,
     "name": "Mia Anderson",
     "email": "mia@anderson.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 19,
     "name": "Christopher Martin",
     "email": "christopher@martin.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 20,
     "name": "Ava Martin",
     "email": "ava@martin.com",
-    "password": "password123"
+    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
+  },
+  {
+    "id": 21,
+    "name": "Jose Perez",
+    "email": "jose@perez.com",
+    "password": "$2b$10$ZUTP3fTGihT8N3/GaeTu2.QkUgJISJ51WavycFbbRJqoSoMFxWFAa"
   }
 ]
