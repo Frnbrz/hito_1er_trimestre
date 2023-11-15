@@ -19,6 +19,10 @@ export function addUser(newUserEntry: newUserEntry): User {
     ...newUserEntry
   }
 
+  if (users.find((user) => user.email === newUser.email)) {
+    throw new Error('Email already exists')
+  }
+
   fs.writeFileSync(
     './src/bd/users.json',
     JSON.stringify([...users, newUser], null, 2)
