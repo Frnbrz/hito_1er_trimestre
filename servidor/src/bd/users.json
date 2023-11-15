@@ -1,128 +1,67 @@
 [
   {
     "id": 1,
-    "name": "John Doe",
-    "email": "john@doe.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
+    "name": "admin",
+    "email": "admin@admin.com",
+    "description": "Administrador del sistema",
+    "role": "admin",
+    "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
   {
     "id": 2,
-    "name": "Sojung Lee",
-    "email": "sojung@lee.com",
+    "name": "Mauricio Gómez",
+    "email": "mauricio@gomez",
+    "description": "Entrenador jefe de artes marciales",
+    "ceo": true,
+    "role": "instructor",
     "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 3,
-    "name": "John Smith",
-    "email": "john@smith.com",
+    "name": "Sarah Nova",
+    "email": "sarah@nova.com",
+    "description": "Ayudante entrenadorde artes marciales",
+    "role": "asistente",
     "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 4,
-    "name": "Jane Smith",
-    "email": "jane@smith.com",
+    "name": "Guy Victory",
+    "email": "guy@victory.com",
+    "description": "Entrenador asistente de artes marciales",
+    "role": "instructor",
     "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 5,
-    "name": "Bob Johnson",
-    "email": "bob@johnson.com",
+    "name": "Morris Davis",
+    "email": "morris@davis.com",
+    "description": "Asistente entrenador de artes marciales",
+    "role": "asistente",
     "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 6,
-    "name": "Alice Johnson",
-    "email": "alice@johnson.com",
+    "name": "Traci Santiago",
+    "email": "traci@santiago.com",
+    "description": "Preparadora física",
+    "role": "preparador",
     "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 7,
-    "name": "David Lee",
-    "email": "david@lee.com",
+    "name": "Harpreet Kaur",
+    "email": "harpreet@kaur.com",
+    "description": "Preparador físico",
+    "role": "preparador",
     "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
   },
   {
     "id": 8,
-    "name": "Emily Lee",
-    "email": "emily@lee.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 9,
-    "name": "Michael Brown",
-    "email": "michael@brown.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 10,
-    "name": "Sarah Brown",
-    "email": "sarah@brown.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 11,
-    "name": "William Davis",
-    "email": "william@davis.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 12,
-    "name": "Olivia Davis",
-    "email": "olivia@davis.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 13,
-    "name": "James Wilson",
-    "email": "james@wilson.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 14,
-    "name": "Sophia Wilson",
-    "email": "sophia@wilson.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 15,
-    "name": "Benjamin Taylor",
-    "email": "benjamin@taylor.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 16,
-    "name": "Isabella Taylor",
-    "email": "isabella@taylor.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 17,
-    "name": "Daniel Anderson",
-    "email": "daniel@anderson.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 18,
-    "name": "Mia Anderson",
-    "email": "mia@anderson.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 19,
-    "name": "Christopher Martin",
-    "email": "christopher@martin.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 20,
-    "name": "Ava Martin",
-    "email": "ava@martin.com",
-    "password": "$2a$12$Hp9/3fR5bYxqsPzyZP9lyeDyeZ2SzmR7h3er6MhGhZKZq6xxhViAm"
-  },
-  {
-    "id": 21,
-    "name": "Jose Perez",
-    "email": "jose@perez.com",
-    "password": "$2b$10$ZUTP3fTGihT8N3/GaeTu2.QkUgJISJ51WavycFbbRJqoSoMFxWFAa"
+    "name": "usuario",
+    "email": "a@a.com",
+    "description": "Usuario de prueba",
+    "role": "user",
+    "password": "$2a$12$nVJGqeyZk5ZC/m0KShj6JOn3a5p.JDS3sKhRnUrypElVPWBFUXJSa"
   }
 ]
