@@ -9,8 +9,9 @@ function login() {
   }).then((res) => {
     if (res.status === 200) {
       res.json().then((data) => {
-        localStorage.setItem('token', data.token)
-        window.location.href = '/home.html'
+        document.cookie = `token=${data.data.token}`
+        window.history.pushState({}, '', '/home')
+        window.location.reload()
       })
     }
     document.querySelector('.error').innerHTML = 'Login failed'
