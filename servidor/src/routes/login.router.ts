@@ -15,11 +15,12 @@ loginRouter.post('/', (req: Request, res: Response) => {
     ) as newLoginEntry
     const user: User | undefined = login(newLoginEntry) as User
     if (user !== undefined) {
-      const { id, name } = user
+      const { id, name, role } = user
       const token = jwt.sign(
         {
           sub: id,
           name,
+          role,
           exp: Date.now() + 60 * 1000
         },
         SECRET_KEY
