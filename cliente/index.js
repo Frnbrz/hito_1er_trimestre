@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get('/login', isLoged, (_req, res) => {
-  return res.redirect('index.html')
+  return res.redirect('login.html')
 })
 
 app.get('/home', soloPublico, (_req, res) => {
@@ -54,7 +54,7 @@ function soloAdmin(req, res, next) {
   if (user === 'admin') {
     next()
   } else {
-    return res.redirect('/')
+    return res.redirect('/login')
   }
 }
 
