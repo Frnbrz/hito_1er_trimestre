@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "bomber jacket",
+    "category": "clothes",
+    "price": 20,
+    "stock": 10,
+    "img": "https://i.ibb.co/0j3h8qL/bomber-jacket.jpg"
+  },
+  {
+    "id": 2,
+    "name": "denim jacket",
+    "category": "clothes",
+    "price": 30,
+    "stock": 15,
+    "img": "https://i.ibb.co/0j3h8qL/denim-jacket.jpg"
+  },
+  {
+    "id": 3,
+    "name": "leather jacket",
+    "category": "clothes",
+    "price": 50,
+    "stock": 5,
+    "img": "https://i.ibb.co/0j3h8qL/leather-jacket.jpg"
+  },
+  {
+    "id": 4,
+    "name": "black t-shirt",
+    "category": "clothes",
+    "price": 10,
+    "stock": 20,
+    "img": "https://i.ibb.co/0j3h8qL/black-t-shirt.jpg"
+  },
+  {
+    "id": 5,
+    "name": "white t-shirt",
+    "category": "clothes",
+    "price": 10,
+    "stock": 25,
+    "img": "https://i.ibb.co/0j3h8qL/white-t-shirt.jpg"
+  },
+  {
+    "id": 6,
+    "name": "blue jeans",
+    "category": "clothes",
+    "price": 25,
+    "stock": 30,
+    "img": "https://i.ibb.co/0j3h8qL/blue-jeans.jpg"
+  },
+  {
+    "id": 7,
+    "name": "black jeans",
+    "category": "clothes",
+    "price": 25,
+    "stock": 35,
+    "img": "https://i.ibb.co/0j3h8qL/black-jeans.jpg"
+  },
+  {
+    "id": 8,
+    "name": "sneakers",
+    "category": "shoes",
+    "price": 40,
+    "stock": 10,
+    "img": "https://i.ibb.co/0j3h8qL/sneakers.jpg"
+  },
+  {
+    "id": 9,
+    "name": "boots",
+    "category": "shoes",
+    "price": 60,
+    "stock": 5,
+    "img": "https://i.ibb.co/0j3h8qL/boots.jpg"
+  },
+  {
+    "id": 10,
+    "name": "sandals",
+    "category": "shoes",
+    "price": 20,
+    "stock": 15,
+    "img": "https://i.ibb.co/0j3h8qL/sandals.jpg"
+  },
+  {
+    "id": 11,
+    "name": "sunglasses",
+    "category": "accessories",
+    "price": 15,
+    "stock": 20,
+    "img": "https://i.ibb.co/0j3h8qL/sunglasses.jpg"
+  },
+  {
+    "id": 12,
+    "name": "watch",
+    "category": "accessories",
+    "price": 30,
+    "stock": 10,
+    "img": "https://i.ibb.co/0j3h8qL/watch.jpg"
+  },
+  {
+    "id": 13,
+    "name": "backpack",
+    "category": "accessories",
+    "price": 25,
+    "stock": 15,
+    "img": "https://i.ibb.co/0j3h8qL/backpack.jpg"
+  },
+  {
+    "id": 14,
+    "name": "wallet",
+    "category": "accessories",
+    "price": 20,
+    "stock": 25,
+    "img": "https://i.ibb.co/0j3h8qL/wallet.jpg"
+  },
+  {
+    "id": 15,
+    "name": "earrings",
+    "category": "jewelry",
+    "price": 10,
+    "stock": 30,
+    "img": "https://i.ibb.co/0j3h8qL/earrings.jpg"
+  },
+  {
+    "id": 16,
+    "name": "necklace",
+    "category": "jewelry",
+    "price": 15,
+    "stock": 20,
+    "img": "https://i.ibb.co/0j3h8qL/necklace.jpg"
+  },
+  {
+    "id": 17,
+    "name": "bracelet",
+    "category": "jewelry",
+    "price": 12,
+    "stock": 25,
+    "img": "https://i.ibb.co/0j3h8qL/bracelet.jpg"
+  },
+  {
+    "id": 18,
+    "name": "ring",
+    "category": "jewelry",
+    "price": 10,
+    "stock": 35,
+    "img": "https://i.ibb.co/0j3h8qL/ring.jpg"
+  },
+  {
+    "id": 19,
+    "name": "hat",
+    "category": "accessories",
+    "price": 15,
+    "stock": 20,
+    "img": "https://i.ibb.co/0j3h8qL/hat.jpg"
+  },
+  {
+    "id": 20,
+    "name": "scarf",
+    "category": "accessories",
+    "price": 10,
+    "stock": 25,
+    "img": "https://i.ibb.co/0j3h8qL/scarf.jpg"
+  }
+]

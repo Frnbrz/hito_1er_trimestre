@@ -1,3 +1,4 @@
+import bcrypt from 'bcrypt'
 import usersData from '../bd/users.json'
 import { User, newLoginEntry } from '../types/types'
 
@@ -7,9 +8,8 @@ export function login(newLoginEntry: newLoginEntry): newLoginEntry | undefined {
   const user = users.find(
     (user) =>
       user.email === newLoginEntry.email &&
-      user.password === newLoginEntry.password
+      bcrypt.compare(newLoginEntry.password, user.password)
   )
-
   if (user != null) {
     return user
   }
