@@ -17,3 +17,11 @@ function login() {
     document.querySelector('.error').innerHTML = 'Login failed'
   })
 }
+
+function logout() {
+  document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+  window.history.pushState({}, '', '/')
+  window.location.reload()
+}
+
+document.querySelector('#logout').addEventListener('click', logout)
