@@ -56,3 +56,13 @@ port: 3001
 ![Refresh Token](./servidor/static/jwt-refresh-token-node-js-example-flow.png)
 
 ![Node.js Express Architecture with Authentication & Authorization](./servidor/static/node-js-mongodb-jwt-authentication-architecture.png)
+
+## Aturization
+
+stateless statefull
+
+http es stateless para convertirlo en statefull
+
+Librerias
+
+Crear una sesion, hacer un token y meterlo en la cookie
