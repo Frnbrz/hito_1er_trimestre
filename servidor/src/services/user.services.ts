@@ -1,3 +1,4 @@
+import bcrypt from 'bcrypt'
 import fs from 'fs'
 import usersData from '../bd/users.json'
 import { ThrowError } from '../types/enums'
@@ -17,6 +18,7 @@ export function findUserById(id: number): User | undefined {
 export function addUser(newUserEntry: newUserEntry): User {
   const newUser = {
     id: users.length + 1,
+    password: bcrypt.hashSync(newUserEntry.password, 10),
     ...newUserEntry
   }
 
