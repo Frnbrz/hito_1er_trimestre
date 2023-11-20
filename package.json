@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:servidor": "cd servidor && npm run dev",
-    "dev:cliente": "cd cliente && npm run dev"
+    "dev:cliente": "cd cliente && npm run dev",
+    "install": "cd cliente && npm install && cd .. && cd servidor && npm install && cd .."
   },
   "keywords": [],
   "author": "Francisco Briz",
