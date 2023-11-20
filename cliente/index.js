@@ -10,12 +10,20 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+app.get('/', (_req, res) => {
+  return res.redirect('landing.html')
+})
+
 app.get('/login', isLoged, (_req, res) => {
   return res.redirect('login.html')
 })
 
 app.get('/home', soloPublico, (_req, res) => {
   return res.redirect('home.html')
+})
+
+app.get('/*', (_req, res) => {
+  return res.redirect('error.html')
 })
 
 app.listen(port, () => {
@@ -40,8 +48,6 @@ function getUser(req) {
 
 function isLoged(req, res, next) {
   const user = getUser(req)
-  console.log(user)
-
   if (user === undefined) {
     next()
   } else {
