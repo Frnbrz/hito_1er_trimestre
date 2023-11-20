@@ -1,6 +1,6 @@
-# API Node Server + Vanilla js Front
+# API Nodejs + Cliente js
 
-A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, and Mongoose.
+Api rest con nodejs, express con un cliente con js sin framework.
 
 ## Start
 
@@ -10,7 +10,7 @@ To start client server:
 npm run dev:cliente
 ```
 
-To start server server:
+To start server:
 
 ```bash
 npm run dev:servidor
@@ -19,13 +19,14 @@ npm run dev:servidor
 Install the dependencies:
 
 ```bash
-npm install
+npm run install
 ```
 
 ## Features
 
-- **NoSQL database**: [MongoDB](https://www.mongodb.com) object data modeling using [Mongoose](https://mongoosejs.com)
-- **Authentication and authorization**: using [passport](http://www.passportjs.org)
+- **NoSQL database**: [MongoDB](https://www.mongodb.com) con libreria [Mongoose](https://mongoosejs.com)
+- **Authentication and authorization**: usando [jwt](https://jwt.io/)
+- **Encriptacion contraseñas**: usando [bcrypt](https://bcrypt-generator.com/)
 
 ## API
 
@@ -50,6 +51,11 @@ port: 3001
 ## Dependencies
 
 - **Bootstrap**: [bootstrap](https://getbootstrap.com/)
+- **DotEnv**: [dotenv](https://www.npmjs.com/package/dotenv)
+- **Cors**: [cors](https://www.npmjs.com/package/cors)
+- **Express**: [express](https://expressjs.com/)
+- **Bcrypt**: [bcrypt](https://bcrypt-generator.com/)
+- **JsonWebToken**: [jwt](https://www.npmjs.com/package/jsonwebtoken)
 
 ## Auth
 
