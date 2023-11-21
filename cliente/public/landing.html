@@ -7,25 +7,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>landing</h1>
-      <a href="/login">Login</a>
-    </header>
-    <main>
-      <section class="uno">
-        <h2>uno</h2>
+    <div class="app">
+      <header>
+        <nav class="landing-navbar">
+          <a href="#info-tag" class="">Información</a>
+          <a href="#contacto-tag" class="">Contacto</a>
+          <a href="/login" class="">Acceso Cliente</a>
+        </nav>
+        <img src="./img/tatami.jpg" alt="tatami" class="fondo" />
+        <img src="./img/karateka.png" alt="karateka" class="delante" />
+        <h1 class="titulo">DuBo Martial Arts</h1>
+      </header>
+      <section class="contenedor">
+        <div class="contenido">
+          <div class="card-contenido">
+            <img src="./img/card.jpg" alt="card" />
+            <div class="card-texto">
+              <h2 id="info-tag">Información</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="card-contenido">
+            <img src="./img/card.jpg" alt="card" />
+            <div class="card-texto">
+              <h2 id="contacto-tag">Contacto</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="dos">
-        <h2>dos</h2>
-      </section>
-      <section class="tres">
-        <h2>tres</h2>
-      </section>
-      </section >
-      <section class="cuatro">
-        <h2>cuatro</h2>
-      </section>
-    </main>
-    <footer><p>pie de pagina</p></footer>
+      <footer class="landing-footer">
+        <p>DuBo Martial Arts</p>
+      </footer>
+    </div>
   </body>
 </html>
