@@ -21,7 +21,7 @@ function login() {
 
 function logout() {
   document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-  window.history.pushState({}, '', '/')
+  window.history.pushState({}, '', '/login')
   window.location.reload()
 }
 
