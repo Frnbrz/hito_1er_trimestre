@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "clase arte marcial 1",
+    "description": "descripcion de la clase 1",
+    "date": "2019-01-01",
+    "time": "10:00",
+    "duration": 60,
+    "capacity": 10,
+    "instructor": 1,
+    "price": 10,
+    "users": []
+  },
+  {
+    "id": 2,
+    "name": "clase arte marcial 2",
+    "description": "descripcion de la clase 2",
+    "date": "2019-01-01",
+    "time": "10:00",
+    "duration": 60,
+    "capacity": 10,
+    "instructor": 1,
+    "price": 10,
+    "users": []
+  },
+  {
+    "id": 3,
+    "name": "clase arte marcial 3",
+    "description": "descripcion de la clase 3",
+    "date": "2019-01-01",
+    "time": "10:00",
+    "duration": 60,
+    "capacity": 10,
+    "instructor": 1,
+    "price": 10,
+    "users": []
+  },
+  {
+    "id": 4,
+    "name": "clase arte marcial 4",
+    "description": "descripcion de la clase 4",
+    "date": "2019-01-01",
+    "time": "10:00",
+    "duration": 60,
+    "capacity": 10,
+    "instructor": 1,
+    "price": 10,
+    "users": []
+  },
+  {
+    "id": 5,
+    "name": "clase arte marcial 5",
+    "description": "descripcion de la clase 5",
+    "date": "2019-01-01",
+    "time": "10:00",
+    "duration": 60,
+    "capacity": 10,
+    "instructor": 1,
+    "price": 10,
+    "users": []
+  },
+  {
+    "id": 6,
+    "name": "clase arte marcial 6",
+    "description": "descripcion de la clase 6",
+    "date": "2019-01-01",
+    "time": "10:00",
+    "duration": 60,
+    "capacity": 10,
+    "instructor": 1,
+    "price": 10,
+    "users": []
+  }
+]
