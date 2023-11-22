@@ -9,6 +9,7 @@ function login() {
   }).then((res) => {
     if (res.status === 200) {
       res.json().then((data) => {
+        localStorage.setItem('usuario', data.data.user.name)
         document.cookie = `token=${data.data.token}`
         window.history.pushState({}, '', '/home')
         window.location.reload()
@@ -25,3 +26,9 @@ function logout() {
 }
 
 document.querySelector('#logout').addEventListener('click', logout)
+
+if (window.location.pathname === '/home.html') {
+  const usuario = localStorage.getItem('usuario')
+
+  document.querySelector('.usuario').innerHTML = usuario
+}
