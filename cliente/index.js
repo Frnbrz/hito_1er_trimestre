@@ -66,7 +66,7 @@ function soloAdmin(req, res, next) {
 
 function soloPublico(req, res, next) {
   const user = getUser(req)
-  if (user === 'user') {
+  if (user !== undefined) {
     next()
   } else {
     return res.redirect('/login')
