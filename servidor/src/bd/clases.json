@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Arte marcial Avanzado",
+    "aforo": 5,
+    "horario": [
+      "Lunes 18:00",
+      "Martes 18:00",
+      "Miércoles 18:00",
+      "Jueves 18:00",
+      "Viernes 18:00"
+    ],
+    "profesor": 1,
+    "usuarios": [2, 3, 7, 5]
+  },
+  {
+    "id": 2,
+    "name": "Arte marcial Medio",
+    "aforo": 4,
+    "horario": [
+      "Lunes 19:00",
+      "Martes 19:00",
+      "Miércoles 19:00",
+      "Jueves 19:00",
+      "Viernes 19:00"
+    ],
+    "profesor": 3,
+    "usuarios": [6, 4]
+  },
+  {
+    "id": 3,
+    "name": "Arte marcial Básico",
+    "aforo": 3,
+    "horario": [
+      "Lunes 20:00",
+      "Martes 20:00",
+      "Miércoles 20:00",
+      "Jueves 20:00",
+      "Viernes 20:00"
+    ],
+    "profesor": 4,
+    "usuarios": [8, 9]
+  },
+  {
+    "id": 4,
+    "name": "Preparación física",
+    "aforo": 1,
+    "profesor": 5,
+    "usuarios": []
+  }
+]
