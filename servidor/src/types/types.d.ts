@@ -9,6 +9,24 @@ export interface User {
   password: string
 }
 
+export interface Profesor {
+  id: number
+  name: string
+  email: string
+  description: string
+  role: Role
+  password: string
+}
+
+interface Clase {
+  id: number
+  name: string
+  aforo: number
+  horario: string[]
+  profesor: number
+  usuarios: number[]
+}
+
 export type newUserEntry = Omit<User, 'id', 'password'>
 
 export type newLoginEntry = Omit<User, 'id', 'name', 'role', 'description'>
