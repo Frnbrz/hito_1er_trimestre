@@ -6,7 +6,6 @@
     "role": "admin",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 2,
     "name": "usuario",
@@ -14,7 +13,6 @@
     "role": "user",
     "password": "$2a$12$nVJGqeyZk5ZC/m0KShj6JOn3a5p.JDS3sKhRnUrypElVPWBFUXJSa"
   },
-
   {
     "id": 3,
     "name": "usuario2",
@@ -22,7 +20,6 @@
     "role": "user",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 4,
     "name": "usuario3",
@@ -30,7 +27,6 @@
     "role": "user",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 5,
     "name": "usuario4",
@@ -38,7 +34,6 @@
     "role": "user",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 6,
     "name": "usuario5",
@@ -46,7 +41,6 @@
     "role": "user",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 7,
     "name": "usuario6",
@@ -54,7 +48,6 @@
     "role": "user",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 8,
     "name": "usuario7",
@@ -62,7 +55,6 @@
     "role": "user",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 9,
     "name": "usuario8",
@@ -70,7 +62,6 @@
     "role": "user",
     "password": "$2a$12$Z1/K2yoBhwoZ2/u1/zO7f.3h.I6P3J6nq5ZSaw.nfyWKwe.nEPRq2"
   },
-
   {
     "id": 10,
     "name": "usuario9",
