@@ -15,7 +15,7 @@ loginRouter.post('/', (req: Request, res: Response) => {
     ) as newLoginEntry
     const user: User | undefined = login(newLoginEntry) as User
     if (user !== undefined) {
-      const { id, name, role } = user
+      const { id, name, role, email } = user
       const token = jwt.sign(
         {
           sub: id,
@@ -27,7 +27,10 @@ loginRouter.post('/', (req: Request, res: Response) => {
       )
       res
         .status(200)
-        .send({ status: StatusType.OK, data: { user: { name }, token } })
+        .send({
+          status: StatusType.OK,
+          data: { user: { id, name, email }, token }
+        })
     } else {
       res
         .status(401)
