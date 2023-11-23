@@ -4,6 +4,14 @@ export interface User {
   id: number
   name: string
   email: string
+  role: Role
+  password: string
+}
+
+export interface Trainer {
+  id: number
+  name: string
+  email: string
   description: string
   role: Role
   password: string
@@ -29,7 +37,7 @@ interface Clase {
 
 export type newUserEntry = Omit<User, 'id', 'password'>
 
-export type newLoginEntry = Omit<User, 'id', 'name', 'role', 'description'>
+export type newLoginEntry = Omit<User, 'id', 'name', 'role'>
 
 export interface Product {
   id: number

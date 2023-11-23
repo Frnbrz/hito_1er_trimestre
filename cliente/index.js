@@ -14,6 +14,10 @@ app.get('/', (_req, res) => {
   return res.redirect('landing.html')
 })
 
+app.get('/old', (_req, res) => {
+  return res.redirect('landing_old.html')
+})
+
 app.get('/login', isLoged, (_req, res) => {
   return res.redirect('login.html')
 })
