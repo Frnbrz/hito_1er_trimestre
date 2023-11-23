@@ -45,16 +45,13 @@ function renderNavbar() {
             class="collapse navbar-collapse justify-content-end"
             id="navbarNavAltMarkup"
           >
-            <div class="navbar-nav d-flex justify-content-between w-100">
+            <div class="navbar-nav d-flex justify-content-between aling-items-center w-100 ">
               <div class="d-flex">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="/clases">Clases</a>
+                <a class="nav-link" href="/clases">Tus clases</a>
               </div>
               <span>
-                <a class="nav-link" href="#">${localStorage.getItem(
-                  'usuario'
-                )}</a>
+                ${localStorage.getItem('usuario')}
               </span>
               <button class="btn btn-sm btn-outline-secondary" id="logout" type="button">
                 Logout
