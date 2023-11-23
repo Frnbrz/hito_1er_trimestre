@@ -9,7 +9,7 @@ function login() {
   }).then((res) => {
     if (res.status === 200) {
       res.json().then((data) => {
-        localStorage.setItem('usuario', data.data.user.name)
+        localStorage.setItem('usuario', JSON.stringify(data.data.user))
         document.cookie = `token=${data.data.token}`
         window.history.pushState({}, '', '/home')
         window.location.reload()
@@ -21,13 +21,17 @@ function login() {
 
 function logout() {
   document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+  localStorage.removeItem('usuario')
   window.history.pushState({}, '', '/login')
   window.location.reload()
 }
 
 function renderNavbar() {
+  const username =
+    JSON.parse(localStorage.getItem('usuario'))?.name || 'Usuario'
+
   const navbarHTML = `
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary px-5">
         <div class="container-fluid">
           <a class="navbar-brand" href="/home">DuBo</a>
           <button
@@ -48,10 +52,11 @@ function renderNavbar() {
             <div class="navbar-nav d-flex justify-content-between aling-items-center w-100 ">
               <div class="d-flex">
                 <a class="nav-link" href="/clases">Clases</a>
-                <a class="nav-link" href="/clases">Tus clases</a>
+                <a class="nav-link" href="/perfil">Tus clases</a>
               </div>
-              <span>
-                ${localStorage.getItem('usuario')}
+              
+              <span class="nav-username">
+                ${username}
               </span>
               <button class="btn btn-sm btn-outline-secondary" id="logout" type="button">
                 Logout
@@ -61,13 +66,96 @@ function renderNavbar() {
         </div>
       </nav>`
 
-  const routes = ['/home.html']
+  const routes = ['/home.html', '/clases.html', '/perfil.html']
 
   if (routes.includes(window.location.pathname)) {
-    console.log('render navbar')
     document.querySelector('.navbarRenderizado').innerHTML = navbarHTML
     document.querySelector('#logout').addEventListener('click', logout)
   }
 }
 
 renderNavbar()
+
+function renderClases() {
+  if (window.location.pathname === '/clases.html') {
+    fetch('http://localhost:3000/api/clases', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `${document.cookie.split('=')[1]}`
+      }
+    }).then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          const clases = data.data
+          const clasesHTML = clases
+            .map((clase) => {
+              return `
+            <div class="card">
+              <img src="${clase.image}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${clase.name}</h5>
+                <p class="card-text">${clase.description}</p>
+                <button class="btn btn-primary">Inscribirse</button>
+              </div>
+            </div> 
+            `
+            })
+            .join('')
+          document.querySelector('.clasesRenderizadas').innerHTML = clasesHTML
+        })
+      }
+    })
+  }
+}
+
+renderClases()
+
+function renderPerfil() {
+  if (window.location.pathname === '/perfil.html') {
+    fetch('http://localhost:3000/api/clases', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `${document.cookie.split('=')[1]}`
+      }
+    }).then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          const clases = data.data
+          const perfilClases = clases.filter((clase) => {
+            return clase.users.includes(
+              JSON.parse(localStorage.getItem('usuario')).id
+            )
+          })
+
+          console.log(perfilClases)
+
+          if (perfilClases.length === 0) {
+            document.querySelector('.perfilRenderizado').innerHTML =
+              'No estas inscripto a ninguna clase'
+            return
+          } else {
+            const perfilHtml = perfilClases
+              .map((clase) => {
+                return `
+            <div class="card">
+              <img src="${clase.image}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${clase.name}</h5>
+                <p class="card-text">${clase.description}</p>
+                <button class="btn btn-primary">Inscribirse</button>
+              </div>
+            </div> 
+            `
+              })
+              .join('')
+            document.querySelector('.perfilRenderizado').innerHTML = perfilHtml
+          }
+        })
+      }
+    })
+  }
+}
+
+renderPerfil()
