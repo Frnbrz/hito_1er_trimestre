@@ -26,6 +26,14 @@ app.get('/home', soloPublico, (_req, res) => {
   return res.redirect('home.html')
 })
 
+app.get('/clases', soloPublico, (_req, res) => {
+  return res.redirect('clases.html')
+})
+
+app.get('/perfil', soloPublico, (_req, res) => {
+  return res.redirect('perfil.html')
+})
+
 app.get('/*', (_req, res) => {
   return res.redirect('error.html')
 })
