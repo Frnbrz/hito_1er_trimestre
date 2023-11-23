@@ -8,15 +8,6 @@ export interface User {
   password: string
 }
 
-export interface Trainer {
-  id: number
-  name: string
-  email: string
-  description: string
-  role: Role
-  password: string
-}
-
 export interface Profesor {
   id: number
   name: string
@@ -29,10 +20,12 @@ export interface Profesor {
 interface Clase {
   id: number
   name: string
+  description: string
+  image: string
   aforo: number
   horario: string[]
   profesor: number
-  usuarios: number[]
+  users: number[]
 }
 
 export type newUserEntry = Omit<User, 'id', 'password'>
