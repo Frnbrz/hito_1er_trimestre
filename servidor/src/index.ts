@@ -1,7 +1,9 @@
 import cors from 'cors'
 import express from 'express'
 import { middleware } from './middleware/user.middleware'
+import { clasesRouter } from './routes/clases.router'
 import { loginRouter } from './routes/login.router'
+import { profesoresRouter } from './routes/profesores.router'
 import { productsRouter } from './routes/store.router'
 import { usersRouter } from './routes/users.router'
 
@@ -20,6 +22,8 @@ app.get('/', (_req, res) => {
 
 app.use('/api/login', loginRouter)
 app.use('/api/users', middleware, usersRouter)
+app.use('/api/profesores', middleware, profesoresRouter)
+app.use('/api/clases', middleware, clasesRouter)
 app.use('/api/products', middleware, productsRouter)
 
 app.listen(PORT, () => {

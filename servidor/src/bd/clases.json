@@ -1,74 +1,51 @@
 [
   {
     "id": 1,
-    "name": "clase arte marcial 1",
-    "description": "descripcion de la clase 1",
-    "date": "2019-01-01",
-    "time": "10:00",
-    "duration": 60,
-    "capacity": 10,
-    "instructor": 1,
-    "price": 10,
-    "users": []
+    "name": "Arte marcial Avanzado",
+    "aforo": 5,
+    "horario": [
+      "Lunes 18:00",
+      "Martes 18:00",
+      "Miércoles 18:00",
+      "Jueves 18:00",
+      "Viernes 18:00"
+    ],
+    "profesor": 1,
+    "usuarios": [2, 3, 7, 5]
   },
   {
     "id": 2,
-    "name": "clase arte marcial 2",
-    "description": "descripcion de la clase 2",
-    "date": "2019-01-01",
-    "time": "10:00",
-    "duration": 60,
-    "capacity": 10,
-    "instructor": 1,
-    "price": 10,
-    "users": []
+    "name": "Arte marcial Medio",
+    "aforo": 4,
+    "horario": [
+      "Lunes 19:00",
+      "Martes 19:00",
+      "Miércoles 19:00",
+      "Jueves 19:00",
+      "Viernes 19:00"
+    ],
+    "profesor": 3,
+    "usuarios": [6, 4]
   },
   {
     "id": 3,
-    "name": "clase arte marcial 3",
-    "description": "descripcion de la clase 3",
-    "date": "2019-01-01",
-    "time": "10:00",
-    "duration": 60,
-    "capacity": 10,
-    "instructor": 1,
-    "price": 10,
-    "users": []
+    "name": "Arte marcial Básico",
+    "aforo": 3,
+    "horario": [
+      "Lunes 20:00",
+      "Martes 20:00",
+      "Miércoles 20:00",
+      "Jueves 20:00",
+      "Viernes 20:00"
+    ],
+    "profesor": 4,
+    "usuarios": [8, 9]
   },
   {
     "id": 4,
-    "name": "clase arte marcial 4",
-    "description": "descripcion de la clase 4",
-    "date": "2019-01-01",
-    "time": "10:00",
-    "duration": 60,
-    "capacity": 10,
-    "instructor": 1,
-    "price": 10,
-    "users": []
-  },
-  {
-    "id": 5,
-    "name": "clase arte marcial 5",
-    "description": "descripcion de la clase 5",
-    "date": "2019-01-01",
-    "time": "10:00",
-    "duration": 60,
-    "capacity": 10,
-    "instructor": 1,
-    "price": 10,
-    "users": []
-  },
-  {
-    "id": 6,
-    "name": "clase arte marcial 6",
-    "description": "descripcion de la clase 6",
-    "date": "2019-01-01",
-    "time": "10:00",
-    "duration": 60,
-    "capacity": 10,
-    "instructor": 1,
-    "price": 10,
-    "users": []
+    "name": "Preparación física",
+    "aforo": 1,
+    "profesor": 5,
+    "usuarios": []
   }
 ]
