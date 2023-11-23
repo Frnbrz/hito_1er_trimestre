@@ -25,10 +25,52 @@ function logout() {
   window.location.reload()
 }
 
-document.querySelector('#logout').addEventListener('click', logout)
+function renderNavbar() {
+  const navbarHTML = `
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home">DuBo</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav d-flex justify-content-between w-100">
+              <div class="d-flex">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Pricing</a>
+              </div>
+              <span>
+                <a class="nav-link" href="#">${localStorage.getItem(
+                  'usuario'
+                )}</a>
+              </span>
+              <button class="btn btn-sm btn-outline-secondary" id="logout" type="button">
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>`
 
-if (window.location.pathname === '/home.html') {
-  const usuario = localStorage.getItem('usuario')
+  const routes = ['/home.html']
 
-  document.querySelector('.usuario').innerHTML = usuario
+  if (routes.includes(window.location.pathname)) {
+    console.log('render navbar')
+    document.querySelector('.navbarRenderizado').innerHTML = navbarHTML
+    document.querySelector('#logout').addEventListener('click', logout)
+  }
 }
+
+renderNavbar()
