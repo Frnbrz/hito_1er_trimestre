@@ -12136,4 +12136,14 @@ header {
   object-fit: cover;
 }
 
+.profesoresRenderizados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+.profesoresRenderizados img {
+  height: 300px;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=style.css.map */
