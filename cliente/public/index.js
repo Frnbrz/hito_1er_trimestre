@@ -90,13 +90,16 @@ function renderClases() {
           const clases = data.data
           const clasesHTML = clases
             .map((clase) => {
+              const aforo = clase.users.length === clase.aforo
+              const disable = aforo ? 'disabled' : ''
               return `
             <div class="card">
               <img src="${clase.image}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${clase.name}</h5>
                 <p class="card-text">${clase.description}</p>
-                <button class="btn btn-primary">Inscribirse</button>
+                <p class="card-text">Aforo: ${clase.users.length}/${clase.aforo}</p>
+                <button class="btn btn-primary" onclick="inscribirseClase(${clase.id})" ${disable}>Inscribirse</button>
               </div>
             </div> 
             `
@@ -129,8 +132,6 @@ function renderPerfil() {
             )
           })
 
-          console.log(perfilClases)
-
           if (perfilClases.length === 0) {
             document.querySelector('.perfilRenderizado').innerHTML =
               'No estas inscripto a ninguna clase'
@@ -144,7 +145,7 @@ function renderPerfil() {
               <div class="card-body">
                 <h5 class="card-title">${clase.name}</h5>
                 <p class="card-text">${clase.description}</p>
-                <button class="btn btn-primary">Inscribirse</button>
+                <button class="btn btn-primary" onclick="borrarseClase(${clase.id})">Borrarse</button>
               </div>
             </div> 
             `
@@ -159,3 +160,39 @@ function renderPerfil() {
 }
 
 renderPerfil()
+
+function inscribirseClase(id) {
+  const user = JSON.parse(localStorage.getItem('usuario'))
+
+  console.log(user)
+  fetch(`http://localhost:3000/api/clases/${id}/users`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `${document.cookie.split('=')[1]}`
+    },
+    body: JSON.stringify({ userId: user.id })
+  }).then((res) => {
+    if (res.status === 200) {
+      window.location.reload()
+    }
+  })
+}
+
+function borrarseClase(id) {
+  const user = JSON.parse(localStorage.getItem('usuario'))
+
+  console.log(user)
+  fetch(`http://localhost:3000/api/clases/${id}/users`, {
+    method: 'Delete',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `${document.cookie.split('=')[1]}`
+    },
+    body: JSON.stringify({ userId: user.id })
+  }).then((res) => {
+    if (res.status === 200) {
+      window.location.reload()
+    }
+  })
+}
