@@ -1,4 +1,3 @@
-import bcrypt from 'bcrypt'
 import { Role, ThrowError } from '../types/enums'
 import { newLoginEntry, newProductEntry, newUserEntry } from '../types/types'
 
@@ -63,17 +62,17 @@ function parsePassword(passwordFromRequest: any): string {
     throw new Error(ThrowError.PASSWORD)
   }
 
-  const passwordEncrypt: string = encryptPassword(passwordFromRequest)
+  const passwordEncrypt: string = passwordFromRequest
 
   return passwordEncrypt
 }
 
-function encryptPassword(password: string): string {
-  const saltRounds = 10
-  const passwordEncrypt = bcrypt.hashSync(password, saltRounds)
+// function encryptPassword(password: string): string {
+//   const saltRounds = 10
+//   const passwordEncrypt = bcrypt.hashSync(password, saltRounds)
 
-  return passwordEncrypt
-}
+//   return passwordEncrypt
+// }
 
 function parseCategory(categoryFromRequest: string): string {
   if (!isString(categoryFromRequest) || isUndefined(categoryFromRequest)) {
