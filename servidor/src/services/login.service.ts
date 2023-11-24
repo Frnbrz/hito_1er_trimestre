@@ -5,11 +5,13 @@ import { User, newLoginEntry } from '../types/types'
 const users: User[] = usersData as User[]
 
 export function login(newLoginEntry: newLoginEntry): newLoginEntry | undefined {
-  const user = users.find(
-    (user) =>
+  const user = users.find((user) => {
+    return (
       user.email === newLoginEntry.email &&
-      bcrypt.compare(newLoginEntry.password, user.password)
-  )
+      bcrypt.compareSync(newLoginEntry.password, user.password) === true
+    )
+  })
+
   if (user != null) {
     return user
   }

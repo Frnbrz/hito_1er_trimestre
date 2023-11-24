@@ -25,12 +25,10 @@ loginRouter.post('/', (req: Request, res: Response) => {
         },
         SECRET_KEY
       )
-      res
-        .status(200)
-        .send({
-          status: StatusType.OK,
-          data: { user: { id, name, email }, token }
-        })
+      res.status(200).send({
+        status: StatusType.OK,
+        data: { user: { id, name, email }, token }
+      })
     } else {
       res
         .status(401)
