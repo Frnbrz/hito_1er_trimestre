@@ -283,3 +283,14 @@ header {
     object-fit: cover;
   }
 }
+
+.profesoresRenderizados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
+}
