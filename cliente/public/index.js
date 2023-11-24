@@ -51,6 +51,7 @@ function renderNavbar() {
           >
             <div class="navbar-nav d-flex justify-content-between aling-items-center w-100 ">
               <div class="d-flex">
+              <a class="nav-link" href="/profesores">Profesores</a>
                 <a class="nav-link" href="/clases">Clases</a>
                 <a class="nav-link" href="/perfil">Tus clases</a>
               </div>
@@ -66,7 +67,12 @@ function renderNavbar() {
         </div>
       </nav>`
 
-  const routes = ['/home.html', '/clases.html', '/perfil.html']
+  const routes = [
+    '/home.html',
+    '/clases.html',
+    '/perfil.html',
+    '/profesores.html'
+  ]
 
   if (routes.includes(window.location.pathname)) {
     document.querySelector('.navbarRenderizado').innerHTML = navbarHTML
@@ -161,6 +167,41 @@ function renderPerfil() {
 
 renderPerfil()
 
+function renderProfesores() {
+  if (window.location.pathname === '/profesores.html') {
+    fetch('http://localhost:3000/api/profesores', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `${document.cookie.split('=')[1]}`
+      }
+    }).then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          const profesores = data.data
+          const profesoresHTML = profesores
+            .map((profesor) => {
+              return `
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">${profesor.name}</h5>
+                <p class="card-text">${profesor.description}</p>
+                <p class="card-text">${profesor.role}</p>
+              </div>
+            </div> 
+            `
+            })
+            .join('')
+          document.querySelector('.profesoresRenderizados').innerHTML =
+            profesoresHTML
+        })
+      }
+    })
+  }
+}
+
+renderProfesores()
+
 function inscribirseClase(id) {
   const user = JSON.parse(localStorage.getItem('usuario'))
 
@@ -196,3 +237,9 @@ function borrarseClase(id) {
     }
   })
 }
+
+fetch('url')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+  })
