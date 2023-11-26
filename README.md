@@ -59,9 +59,9 @@ port: 3001
 
 ## Auth
 
-![Refresh Token](./servidor/static/jwt-refresh-token-node-js-example-flow.png)
+![Refresh Token](./static/jwt-refresh-token-node-js-example-flow.png)
 
-![Node.js Express Architecture with Authentication & Authorization](./servidor/static/node-js-mongodb-jwt-authentication-architecture.png)
+![Node.js Express Architecture with Authentication & Authorization](./static/node-js-mongodb-jwt-authentication-architecture.png)
 
 ## Aturization
 
