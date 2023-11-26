@@ -1,9 +1,9 @@
 import fs from 'fs'
-import storeData from '../bd/store.json'
+import productsData from '../bd/productos.json'
 import { ThrowError } from '../types/enums'
 import { Product, newProductEntry } from './../types/types.d'
 
-const products: Product[] = storeData as Product[]
+const products: Product[] = productsData as Product[]
 
 export function getProducts(): Product[] {
   return products
