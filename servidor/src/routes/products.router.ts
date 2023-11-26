@@ -3,7 +3,7 @@ import {
   addProduct,
   findProductById,
   getProducts
-} from '../services/store.service'
+} from '../services/products.service'
 import { StatusMessage, StatusType } from '../types/enums'
 import { toNewProductEntry } from '../utils/utils'
 
