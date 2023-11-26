@@ -13,7 +13,7 @@
       "Viernes 18:00"
     ],
     "profesor": 1,
-    "users": [2, 3, 7, 5, 2]
+    "users": [2, 3, 7, 5]
   },
   {
     "id": 2,
@@ -29,7 +29,7 @@
       "Viernes 19:00"
     ],
     "profesor": 3,
-    "users": [6, 4, 2]
+    "users": [6, 4]
   },
   {
     "id": 3,
@@ -45,7 +45,7 @@
       "Viernes 20:00"
     ],
     "profesor": 4,
-    "users": [8, 9, 2]
+    "users": [8, 9]
   },
   {
     "id": 4,
