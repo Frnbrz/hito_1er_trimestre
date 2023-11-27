@@ -54,7 +54,7 @@ successfully on port ${port}`)
 function getUser(req) {
   try {
     const cookieJWT = req.headers.cookie.split('=')[1]
-    const secret = process.env.JWT_SECRET
+    const secret = process.env.JWT_SECRET || 'secret'
     const user = jwt.decode(cookieJWT, secret).role
     return user
   } catch (error) {
