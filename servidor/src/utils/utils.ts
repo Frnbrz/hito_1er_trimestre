@@ -1,12 +1,10 @@
-import { Role, ThrowError } from '../types/enums'
+import { ThrowError } from '../types/enums'
 import { newLoginEntry, newProductEntry, newUserEntry } from '../types/types'
 
 export function toNewUserEntry(object: any): newUserEntry {
   const newUserEntry: newUserEntry = {
     name: parseName(object.name),
     email: parseEmail(object.email),
-    description: parseDescription(object.description),
-    role: parseRole(object.role),
     password: parsePassword(object.password)
   }
 
@@ -116,28 +114,28 @@ function parseImg(imgFromRequest: string): string {
   return imgFromRequest
 }
 
-function parseDescription(descriptionFromRequest: string): string {
-  if (
-    !isString(descriptionFromRequest) ||
-    isUndefined(descriptionFromRequest) ||
-    descriptionFromRequest === ''
-  ) {
-    throw new Error(ThrowError.DESCRIPTION)
-  }
+// function parseDescription(descriptionFromRequest: string): string {
+//   if (
+//     !isString(descriptionFromRequest) ||
+//     isUndefined(descriptionFromRequest) ||
+//     descriptionFromRequest === ''
+//   ) {
+//     throw new Error(ThrowError.DESCRIPTION)
+//   }
 
-  return descriptionFromRequest
-}
+//   return descriptionFromRequest
+// }
 
-function parseRole(roleFromRequest: Role): Role {
-  if (
-    roleFromRequest === Role.admin ||
-    roleFromRequest === Role.instructor ||
-    roleFromRequest === Role.user ||
-    roleFromRequest === Role.asistente ||
-    isUndefined(roleFromRequest)
-  ) {
-    throw new Error(ThrowError.ROLE)
-  }
+// function parseRole(roleFromRequest: Role): Role {
+//   if (
+//     roleFromRequest === Role.admin ||
+//     roleFromRequest === Role.instructor ||
+//     roleFromRequest === Role.user ||
+//     roleFromRequest === Role.asistente ||
+//     isUndefined(roleFromRequest)
+//   ) {
+//     throw new Error(ThrowError.ROLE)
+//   }
 
-  return roleFromRequest
-}
+//   return roleFromRequest
+// }
