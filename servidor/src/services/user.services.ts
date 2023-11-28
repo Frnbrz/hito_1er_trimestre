@@ -1,5 +1,4 @@
 import bcrypt from 'bcrypt'
-import fs from 'fs'
 import usersData from '../bd/users.json'
 import { Role, ThrowError } from '../types/enums'
 import { User, newUserEntry } from '../types/types'
@@ -16,26 +15,23 @@ export function findUserById(id: number): User | undefined {
 }
 
 export function addUser(newUserEntry: newUserEntry): User {
-  const newUser: User = {
+  const newUser = {
     id: users.length + 1,
+    ...newUserEntry,
     role: Role.user,
-    password: bcrypt.hashSync(newUserEntry.password, 10),
-    name: newUserEntry.name,
-    email: newUserEntry.email
+    password: bcrypt.hashSync(newUserEntry.password, 10)
   }
 
   if (users.find((user) => user.email === newUser.email)) {
     throw new Error(ThrowError.EMAIL)
   }
 
-  const filePath = '../bd/users.json'
-  const newUsers = JSON.stringify([...users, newUser], null, 2)
+  // fs.writeFileSync(
+  //   './src/bd/users.json',
+  //   JSON.stringify([...users, newUser], null, 2)
+  // )
 
-  try {
-    fs.writeFileSync(filePath, newUsers)
-  } catch (error) {
-    throw new Error(ThrowError.BD)
-  }
   users.push(newUser)
+
   return newUser
 }
