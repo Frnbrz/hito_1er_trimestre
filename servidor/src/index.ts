@@ -21,7 +21,7 @@ app.get('/', (_req, res) => {
 })
 
 app.use('/api/login', loginRouter)
-app.use('/api/users', middleware, usersRouter)
+app.use('/api/users', usersRouter)
 app.use('/api/profesores', middleware, profesoresRouter)
 app.use('/api/clases', middleware, clasesRouter)
 app.use('/api/products', middleware, productsRouter)
