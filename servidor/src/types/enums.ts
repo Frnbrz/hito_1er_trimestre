@@ -30,5 +30,6 @@ export enum ThrowError {
   NOT_FOUND = 'User not found',
   NOT_FOUND_PRODUCT = 'Product not found',
   CATEGORY = 'Incorrect or missing category',
-  PRODUCT = 'Incorrect or missing product'
+  PRODUCT = 'Incorrect or missing product',
+  BD = 'Error at BD'
 }
