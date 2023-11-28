@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dubo - Registro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="principal">
+      <div class="text-center card p-5">
+        <form class="form-signin" method="post" action="register(event)">
+          <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingName"
+              placeholder="name@example.com"
+            />
+            <label for="floatingName">Nombre</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="nombre"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Password</label>
+            <div class="error"></div>
+          </div>
+          <button
+            class="btn btn-lg btn-primary btn-block"
+            type="button"
+            onclick="register()"
+          >
+            Registrarse
+          </button>
+        </form>
+        <p class="mt-5 mb-3 text-muted">
+          ¿Tienes ya una cuenta? <a href="/login"> ir al login </a>
+        </p>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
