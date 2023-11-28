@@ -24,20 +24,18 @@ export function addUser(newUserEntry: newUserEntry): User {
     email: newUserEntry.email
   }
 
-  console.log(newUser)
-
   if (users.find((user) => user.email === newUser.email)) {
     throw new Error(ThrowError.EMAIL)
   }
 
-  users.push(newUser)
+  const filePath = '../bd/users.json'
+  const newUsers = JSON.stringify([...users, newUser], null, 2)
 
-  console.log(users)
   try {
-    fs.writeFileSync('./src/bd/users.json', JSON.stringify(users, null, 2))
+    fs.writeFileSync(filePath, newUsers)
   } catch (error) {
     throw new Error(ThrowError.BD)
   }
-
+  users.push(newUser)
   return newUser
 }
