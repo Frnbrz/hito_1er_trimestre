@@ -34,15 +34,20 @@ function register() {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(user)
-  }).then((res) => {
-    if (res.status === 200) {
-      res.json().then((data) => {
-        window.history.pushState({}, '', '/login')
-        window.location.reload()
-      })
-    }
-    document.querySelector('.error').innerHTML = 'Register failed'
   })
+    .then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          window.history.pushState({}, '', '/login')
+          window.location.reload()
+        })
+        document.querySelector('.error').innerHTML = ''
+      }
+      document.querySelector('.error').innerHTML = 'Register failed'
+    })
+    .catch((err) => {
+      document.querySelector('.error').innerHTML = 'Register failed'
+    })
 }
 
 function logout() {
