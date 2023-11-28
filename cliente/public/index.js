@@ -19,6 +19,32 @@ function login() {
   })
 }
 
+function register() {
+  const name = document.querySelector('#floatingName').value
+  const email = document.querySelector('#floatingInput').value
+  const password = document.querySelector('#floatingPassword').value
+
+  const user = {
+    name,
+    email,
+    password
+  }
+
+  fetch('http://localhost:3000/api/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(user)
+  }).then((res) => {
+    if (res.status === 200) {
+      res.json().then((data) => {
+        window.history.pushState({}, '', '/login')
+        window.location.reload()
+      })
+    }
+    document.querySelector('.error').innerHTML = 'Register failed'
+  })
+}
+
 function logout() {
   document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
   localStorage.removeItem('usuario')
