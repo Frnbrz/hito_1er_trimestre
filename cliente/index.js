@@ -22,6 +22,10 @@ app.get('/login', isLoged, (_req, res) => {
   return res.redirect('login.html')
 })
 
+app.get('/register', isLoged, (_req, res) => {
+  return res.redirect('register.html')
+})
+
 app.get('/home', soloPublico, (_req, res) => {
   return res.redirect('home.html')
 })
