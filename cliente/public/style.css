@@ -11857,18 +11857,18 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 html,
 body {
   box-sizing: border-box;
   font-family: Lato, sans-serif;
   background-color: #f5f5f5;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .titulo {
@@ -12128,7 +12128,7 @@ header {
 
 .perfilRenderizado {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 5rem;
 }
 .perfilRenderizado img {
@@ -12138,7 +12138,7 @@ header {
 
 .profesoresRenderizados {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 5rem;
 }
 .profesoresRenderizados img {
