@@ -274,7 +274,7 @@ header {
 
 .perfilRenderizado {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 5rem;
 
   img {
@@ -285,7 +285,7 @@ header {
 
 .profesoresRenderizados {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 5rem;
 
   img {
